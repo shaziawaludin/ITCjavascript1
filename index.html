@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript-1</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+    <div class="jumbotron">
+        <h1>Hai, Aku Shazi</h1>
+        <p>Kamu tau manusia yang satu ini? Wow itu hebat!</p>
+    </div>
+</header>
+
+<main>
+    <aside>
+        <article>
+            <header>
+                <h3>Apa yang aku inginkan:</h3>
+                <p>Aku tahu mungkin akan memakan waktu yang lama
+                    tapi tidak apa. Semoga kamu bersedia jika
+                    terkadang aku merepotkan :)
+                </p>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="" class="initiator" data-id="htmlcss">Mahir HTML & CSS</a></li>
+                    <li><a href="" class="initiator" data-id="js">Js & frameworknya</a></li>
+                    <li><a href="" class="initiator" data-id="fullstack">Fullstack Dev :)</a></li>
+                    <li><a href="" class="initiator" data-id="AI">Implementer of AI</a></li>
+                </ul>
+            </nav>
+        </article>
+    </aside>
+    <div id="content">
+        <h2>Gambaran dari yang aku inginkan</h2>
+        <article>
+            <div class="hcbox" id="htmlcss">
+                <h3>HTML & CSS</h3>
+                <p>Sebenarnya bagian ini tidak perlu aku gambarkan
+                    dengan kata-kata, kamu mungkin sudah dapat
+                    membayangkannnya ketika aku beri sebuah
+                    gambaran langsung.
+                </p>
+                <p>setidaknya aku ingin bisa membuat
+                    yang seperti ini :
+                </p>
+                <iframe src="assets\What _ ToyFight.html"></iframe>
+
+                <p>Sekarang, kamu paham kan sampai mana.
+                    Yup... itu artinya aku harus dapat memahami sebagian
+                    besar fungsi yang dimiliki oleh html juga css
+                </p>
+            </div>
+
+            <div class="hcbox" id="js">
+                <h3>Javascript & frameworknya</h3>
+                <p>Sebenarnya javascript mudah untuk dipelajari,
+                    tapi saat ini masih ada kendala yang aku alami.<br>
+                    bagaimana sebenarnya implementasinya untuk DOM? :)
+                    fungsinya terlihat sangat banyak :'v
+                </p>
+                <p>Beberapa hal yang dapat aku lakukan dalam 
+                    Javascript saat ini:
+                </p>
+
+                <p>Misal : X = <span id="x"></span> dan Y = <span id="y"></span></p>
+                <p>X + Y = <span id="tambah"></span></p>
+                <p>X - Y = <span id="kurang"></span></p>
+                <p>X &#62; Y ? <span id="lebih"></span></p>
+                <p>X &#60; Y ? <span id="kecil"></span></p>
+
+                <p>Note : lihatlah bagian file js. ini tidak ditulis dalam file html</p>
+                <p>ga puas ?</p>
+                <p>OKE!</p>
+                <iframe src="assets\Webcalculator\index.html"></iframe>
+                <P>eh calculatornya malah kadang error wkwk</P>
+                <p>Tapi aku mau bisa buat seperti ini :</p>
+                <iframe src="http://www.rleonardi.com/interactive-resume/" frameborder="0"></iframe>
+            </div>
+
+            <div class="hcbox" id="fullstack">
+                <h3>Fullstack</h3>
+                <p>sepertinya ini tidak perlu digambarkan seperti apa.<br>
+                    sudah jelas bahwa aku ingin bisa membuat seperti pada html & css, juga javascript sendiri :) <br>
+                    setidaknya jika aku kesulitan mencari partner, aku bisa jadi partner untuk diriku sendiri.
+                </p>
+            </div>
+
+            <div class="hcbox" id="AI">
+                <h3>AI</h3>
+                <p>AKU SANGAT INGIN INI!</p>
+                <p>ini sangat menarik :) cobalah website dibawah ini : </p>
+                <p><a href="https://quickdraw.withgoogle.com/">Ini dia...</a>Itu adalah salah satu AI milik Google</p>
+                <iframe src="https://quickdraw.withgoogle.com/" frameborder="0"></iframe>
+            </div>
+        </article>
+    </div>
+</main>
+
+
+<div id="greeting">
+    <h2>Terimakasih :)</h2>
+    <p>Jika kamu melihat sepertinya ada yang salah dengan
+        diri seorang shazi awaludin, jangan sungkan untuk
+        menegurnya.
+    </p>
+</div>
+
+<footer>
+    <p>Yang aku ingin &#169; 2020, Shazi Awaludin</p>
+</footer>
+
+
+
+<script src="assets/path.js"></script>
+<script type="text/javascript">
+    var iconbx = document.querySelectorAll('.initiator');
+    var contentbx = document.querySelectorAll('.hcbox');
+    var i = 0;
+    for(var i =0; i<iconbx.length; i++){
+        iconbx[i].addEventListener('mouseover', function(){
+            for(var i = 0; i < contentbx.length; i++){
+                contentbx[i].className= 'hcbox';
+            }
+            document.getElementById(this.dataset.id).className = 'hcbox active'
+        }) 
+    }
+</script>
+</body>
+</html>
